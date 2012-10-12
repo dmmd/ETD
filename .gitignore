@@ -14,3 +14,7 @@
 /log/*.log
 /tmp
 /jetty/*
+
+# Ignore Gemfile.lock and RVM setup
+Gemfile.lock
+.rvmrc
