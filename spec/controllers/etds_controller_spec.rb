@@ -20,6 +20,19 @@ describe EtdsController do
        Etd.count.should == @count+1
        flash[:notice].should == 'ETD created'
     end
+  end
 
+  describe "#show" do
+    before do
+      @etd = Etd.create
+    end
+    after do
+      @etd.delete
+    end
+    it "should show an ETD" do
+      get :show, :id => @etd
+      response.should be_successful
+      assigns[:etd].should == @etd
+    end
   end
 end
