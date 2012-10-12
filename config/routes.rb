@@ -1,4 +1,9 @@
 Arch::Application.routes.draw do
+
+  root :to => 'etds#index'
+
+  resources :etds 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
